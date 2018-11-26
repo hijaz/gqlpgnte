@@ -5,12 +5,15 @@ import { Provider, Client } from "urql";
 
 import App from "./github_endpoint/urql/app";
 
+require("es6-promise").polyfill();
+require("isomorphic-fetch");
+
 const client = new Client({
   url: "https://api.github.com/graphql",
   fetchOptions: () => {
     return {
       headers: {
-        authorization: "<GITHUB_TOKEN>"
+        authorization: "Bearer <GITHUB_TOKEN>"
       }
     };
   }

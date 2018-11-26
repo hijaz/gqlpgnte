@@ -28,7 +28,7 @@ const client = new ApolloClient({
       uri: "https://api.github.com/graphql",
       credentials: "include",
       headers: {
-        authorization: "<GITHUB_TOKEN>"
+        authorization: "Bearer <GITHUB_TOKEN>"
       }
     })
   ]),
